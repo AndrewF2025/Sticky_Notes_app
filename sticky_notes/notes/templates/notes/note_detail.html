@@ -1,0 +1,15 @@
+<!-- notes/templates/notes/note_detail.html -->
+{% extends 'base.html' %}
+{% block title %}
+Sticky Notes - {{ note.title }}
+{% endblock %}
+{% block content %}
+<!-- Add a box around the heading and paragraphs -->
+<h2 class="txt-white">{{ note.title }}</h2>
+<p class="note-content txt-white">{{ note.content }}</p>
+<p class="txt-white">Created on: {{ note.created_at }}</p>
+<p class="txt-white">Last updated: {{ note.updated_at }}</p>
+<a href="{% url 'note_update' pk=note.pk %}">Update Post</a>
+<a href="{% url 'note_delete' pk=note.pk %}">Delete Post</a>
+<a href="{% url 'note_list' %}">Back to Post List</a>
+{% endblock %}

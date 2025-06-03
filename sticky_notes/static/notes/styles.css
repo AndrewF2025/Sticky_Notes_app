@@ -1,0 +1,68 @@
+/* notes/static/notes/styles.css  */
+body {
+    background-color: #969696 !important;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #141414;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    margin: 20px;
+    justify-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: hsl(56, 86%, 84%);
+    border: 4px solid #969696;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    display: inline-block;
+    min-height: 250px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+p {
+    word-wrap: normal;
+
+}
+
+.note-content {
+    font-size: large;
+    border-top: double 4px #000000;
+    border-bottom: double 4px #000000;
+    max-width: 800px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.plc-center {
+    place-content: center;
+}
+
+a {
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+label {
+    color: white;
+    display: block !important;
+}

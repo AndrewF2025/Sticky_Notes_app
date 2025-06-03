@@ -1,0 +1,31 @@
+<!-- notes/templates/notes/note_form.html -->
+{% extends 'base.html' %}
+{% block title %}
+Sticky Notes - {% if form.instance.pk %}
+Edit
+{% else %}
+Create
+{% endif %}
+Note
+{% endblock %}
+{% block content %}
+<h2 class="txt-white">
+    {% if form.instance.pk %}
+    Edit
+    {% else %}
+    Create
+    {% endif %}
+    Note
+</h2>
+<!-- If note update then update, otherwise note new -->
+<form method="post"
+    action="{% if form.instance.pk %}{% url 'note_update' pk=form.instance.pk %}{% else %}{% url 'note_create' %}{% endif %}"
+    enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">
+        Save
+    </button>
+</form>
+<a href="{% url 'note_list' %}">Back to Note List</a>
+{% endblock content %}
